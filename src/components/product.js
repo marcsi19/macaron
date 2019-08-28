@@ -3,7 +3,7 @@ import React from 'react'
 
 const Product = (props) => {
 
-  let product = props.product
+  let { product, buttonText } = props
 
 
   return (
@@ -11,7 +11,7 @@ const Product = (props) => {
       {product.title}
       {/* <form onSubmit={props.addToCart}>
         <input onChange={this.handleChange} /> */}
-      <button onClick={(e) => props.addToCart(e)}>Add to Cart</button>
+      <button onClick={(e) => props.addToCart(e)}>{buttonText}</button>
       {/* </form> */}
     </div>
   )

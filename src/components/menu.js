@@ -4,8 +4,8 @@ import Product from './product'
 class Menu extends Component {
 
   render() {
-    let menuItems = this.props.menuItems
-    let addToCart = this.props.addToCart
+    let { menuItems, addToCart, buttonText } = this.props
+
 
     return (
       <div>
@@ -16,9 +16,8 @@ class Menu extends Component {
           {menuItems.map(product => {
             return (
               <div key={product.id} value={product}>
-                {product.title}
-
-                <button type="submit" onClick={() => addToCart(product)}>Add to Cart</button>
+                <img src={product.image} />
+                <button type="submit" onClick={() => addToCart(product)}>{buttonText[product.id - 1]}</button>
               </div>
             )
           }

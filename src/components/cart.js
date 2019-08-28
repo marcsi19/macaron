@@ -2,12 +2,13 @@ import React from 'react'
 
 const Cart = (props) => {
 
-  let cart = props.cart
+  let { cart } = props
   let style1 = { dislay: 'visible' }
   let style2 = { display: 'none' }
 
   let style = props.showCart ? style1 : style2
   console.log('style', style)
+  console.log('CARTCART', cart)
   console.log('showingStyleCart', props.showCart)
 
   return (
