@@ -1,13 +1,19 @@
-import React from 'react';
+import React from "react";
+import { Route, Switch } from "react-router-dom";
+import Home from "./home";
+// import "./App.css";
 
-import './App.scss';
+// import Navbar from "./components/navbar";
+// import Routes from "./routes";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      Hello
+    <div>
+      <Switch>
+        <Route path="/" component={Home} />
+      </Switch>
     </div>
   );
-}
+};
 
 export default App;

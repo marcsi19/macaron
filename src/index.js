@@ -3,16 +3,16 @@ import ReactDOM from "react-dom";
 import "./index.scss";
 import createBrowserHistory from "./history";
 import App from "./App";
-import { HashRouter } from "react-router-dom";
+import { Router } from 'react-router-dom'
 import * as serviceWorker from "./serviceWorker";
 import ScrollToTop from "./scrolltotop";
 
 ReactDOM.render(
-  <HashRouter history={createBrowserHistory}>
+  <Router history={createBrowserHistory}>
     <ScrollToTop>
       <App />
     </ScrollToTop>
-  </HashRouter>,
+  </Router>,
   document.getElementById("root")
 );
 
