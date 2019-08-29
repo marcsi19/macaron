@@ -2,27 +2,33 @@ import React from 'react'
 
 const Cart = (props) => {
 
-  let { cart } = props
-  let style1 = { dislay: 'visible' }
-  let style2 = { display: 'none' }
-
-  let style = props.showCart ? style1 : style2
-  console.log('style', style)
-  console.log('CARTCART', cart)
-  console.log('showingStyleCart', props.showCart)
+  let { cart, showCart, showingCart } = props
+  console.log('CART', cart)
+  // let cartTotal = 0
+  // cart.reduce(((acc, currVal) =>
+  //   cartTotal += acc + currVal.cartTotal
+  // ), 0)
+  // console.log(cartTotal, "INTHECART")
 
   return (
-    <div>
-      <div style={style1}> Cart</div>
+    <div className={props.showCart}>
+      <div> Cart</div>
+      <button onClick={showingCart}>Close</button>
       < div > {cart.map(item => {
         return (
           <div key={item.id}>
             <div>{item.title}</div>
+            <div>{item.quantity}</div>
+            <div>${item.price}</div>
             <button onClick={() => props.removeFromCart(item.id)}>Remove</button>
           </div>
         )
       })}</div >
-    </div>
+      <div>Total: ${cart.reduce(((acc, currVal) =>
+        acc + currVal.cartTotal
+      ), 0)
+      }</div>
+    </div >
 
   )
 }

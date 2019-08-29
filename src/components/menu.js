@@ -17,6 +17,10 @@ class Menu extends Component {
             return (
               <div key={product.id} value={product}>
                 <img src={product.image} />
+                <div>{product.title}</div>
+                <div>{product.quantity}</div>
+                <div>{product.description}</div>
+                <div>${product.price} /ea.</div>
                 <button type="submit" onClick={() => addToCart(product)}>{buttonText[product.id - 1]}</button>
               </div>
             )

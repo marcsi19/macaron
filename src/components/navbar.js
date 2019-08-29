@@ -5,7 +5,6 @@ import cartIcon from '../img/cart_icon.svg'
 
 class Navbar extends Component {
   render() {
-    console.log(this.props.showingCart, "DOIT")
     return (
       <div>
         <nav>
