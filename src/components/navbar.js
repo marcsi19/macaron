@@ -17,12 +17,6 @@ class Navbar extends Component {
           <Link to="/beverages">Beverages</Link>
           <Link to="/gifts">Gifts</Link>
           <span>|</span>
-          {/* <Link to="/" ><img
-            src={cartIcon}
-            alt="Cart"
-            height="22px"
-            width="20px"
-          />Cart</Link> */}
           <button onClick={this.props.showingCart}><img
             src={cartIcon}
             alt="Cart"

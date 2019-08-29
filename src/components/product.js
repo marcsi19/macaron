@@ -3,14 +3,16 @@ import React from 'react'
 
 const Product = (props) => {
 
-  let { product, buttonText } = props
-
+  let { product, addToCart, buttonText } = props
 
   return (
-    <div>
-      {product.title}
-
-      <button onClick={(e) => props.addToCart(e)}>{buttonText}</button>
+    <div >
+      <img src={product.image} />
+      <div>{product.title}</div>
+      <div>{product.quantity}</div>
+      <div>{product.description}</div>
+      <div>${product.price} /ea.</div>
+      <button type="submit" onClick={() => addToCart(product)}>{buttonText[product.id - 1]}</button>
     </div>
   )
 

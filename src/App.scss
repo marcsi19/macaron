@@ -2,40 +2,63 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+.homepage{
+  z-index: 1;
+  // height: ;
+  // background: red
+}
+.homepage_cart {
+  filter: brightness(50%);
+  background-color: rgba(255, 255, 255, 0.438);
   pointer-events: none;
+  cursor: default;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
 .cart_showing {
   display: visible;
+  position: fixed;
+  right: -500px;
+  top: 0px;
+  padding-top: 30px;
+  width: 500px;
+  height: 100vh;
+  filter: brightness(1);
+  background-color: white;
+  -webkit-animation: slide 1s forwards;
+  -webkit-animation-delay: 1s;
+  animation: slide 1s forwards;
+  animation-delay: 0.5s;
+  z-index: 1000;
+}
+@-webkit-keyframes slide {
+  100% { right: 0; }
+}
+@keyframes slide {
+  100% { right: 0; }
 }
 
 .cart_hidden {
   display: none;
+  right: -500px;
+  top: 0px;
+  padding-top: 30px;
+  width: 300px;
+  height: 0;
+  // filter: brightness(1);
+  background-color: white;
+  -webkit-animation: slide-out 1s backwards;
+  -webkit-animation-delay: 1s;
+  animation-direction: normal;
+  animation: slide-out 1s backwards;
+  animation-delay: 0.5s;
+  z-index: 1000;
 }
+
+@-webkit-keyframes slide-out {
+  100% { left: 0; }
+}
+@keyframes slide-out {
+  100% { left: 0; }
+}
+

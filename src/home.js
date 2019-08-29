@@ -41,6 +41,7 @@ const defaultState = {
   }],
   cart: [],
   showCart: "cart_hidden",
+  homepageClass: "homepage",
   buttonText: ["+ Add to Cart", "+ Add to Cart", "+ Add to Cart"]
 }
 class Home extends Component {
@@ -63,10 +64,11 @@ class Home extends Component {
               cartItem.cartquant++
             }
             cartItem.cartTotal = cartItem.price * cartItem.cartquant
-
           }
           return cartItem
         })],
+        showCart: 'cart_showing',
+        homepageClass: "homepage homepage_cart",
         buttontext: [...this.state.buttonText[itemId] = "\u2713 Added to Cart"]
       })
     } else {
@@ -74,6 +76,8 @@ class Home extends Component {
       item.cartTotal = item.price * item.cartquant
       this.setState({
         cart: [...this.state.cart, item],
+        showCart: 'cart_showing',
+        homepageClass: "homepage homepage_cart",
         buttontext: [...this.state.buttonText[itemId] = "\u2713 Added to Cart"]
       })
     }
@@ -98,11 +102,13 @@ class Home extends Component {
   showingCart() {
     if (this.state.showCart === 'cart_hidden') {
       this.setState({
-        showCart: 'cart_showing'
+        showCart: 'cart_showing',
+        homepageClass: "homepage homepage_cart",
       })
     } else {
       this.setState({
-        showCart: 'cart_hidden'
+        showCart: 'cart_hidden',
+        homepageClass: "homepage",
       })
     }
   }
@@ -110,15 +116,17 @@ class Home extends Component {
 
     return (
       <div>
-        <Navbar showingCart={this.showingCart} />
-        <div>
+        <div className={this.state.homepageClass}>
+          <Navbar showingCart={this.showingCart} />
+
           {/* <div className={styles["resizeable-both"]}>{this.state.hello}</div> */}
 
-          <Cart cart={this.state.cart} removeFromCart={this.removeFromCart} showCart={this.state.showCart} showingCart={this.showingCart} />
+
           {/* <Route path="/" render={() => <Cart cart={this.state.cart} removeFromCart={this.state.removeFromCart} showCart={!this.state.showCart} />} /> */}
           <Route path="/menu" render={() => <Menu menuItems={this.state.menuItems} addToCart={this.addToCart} buttonText={this.state.buttonText} />} />
-
         </div>
+        <Cart cart={this.state.cart} removeFromCart={this.removeFromCart} showCart={this.state.showCart} showingCart={this.showingCart} />
+
       </div >
 
     );
