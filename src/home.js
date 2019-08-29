@@ -84,11 +84,8 @@ class Home extends Component {
       menuItems: defaultState.menuItems,
       cart: this.state.cart.map(cartItem => {
         if (cartItem.id === itemId) {
-
           cartItem.cartquant = 0
-
           cartItem.cartTotal = cartItem.price
-
         }
         return cartItem
       }).filter(cartItem => cartItem.id !== itemId),
