@@ -6,10 +6,7 @@ const Cart = (props) => {
 
 
   return (
-    //CSS TRANSITION
     <div className={showCart}>
-      {/* React motion
-     <div className="show_cart"> */}
       <button onClick={showingCart}>Close</button>
       <div>My Cart</div>
       < div > {cart.map(item => {

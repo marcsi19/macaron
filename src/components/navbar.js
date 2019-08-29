@@ -7,22 +7,21 @@ class Navbar extends Component {
   render() {
     return (
       <div>
-        <nav>
-          <Link to='/'> <img
+        <nav className="navbar_main">
+          <Link to='/' className="navbar_logo"> <img
             src={logo}
             alt="Cart"
             height="22px"
           /></Link>
-          <Link to="/menu">Menu</Link>
-          <Link to="/beverages">Beverages</Link>
-          <Link to="/gifts">Gifts</Link>
-          <span>|</span>
-          <button onClick={this.props.showingCart}><img
+          <Link to="/menu" className="navbar_menu">Menu</Link>
+          <Link to="/beverages" className="navbar_menu">Beverages</Link>
+          <Link to="/gifts" className="navbar_menu">Gifts</Link>
+          <span className="navbar_menu">|</span>
+          <button className="cart_nav navbar_menu" onClick={this.props.showingCart}><img
             src={cartIcon}
             alt="Cart"
-            height="22px"
-            width="20px"
-          />Cart</button>
+            className='cart_svg'
+          /><span className="cart_circle">1</span>Cart</button>
         </nav>
       </div>
     )

@@ -8,9 +8,9 @@ class Menu extends Component {
 
 
     return (
-      <div>
+      <div className="menu_main">
         <h3>Menu</h3>
-        <div>
+        <div >
           {menuItems.map(product => {
             return (
               //     <div key={product.id} value={product}>

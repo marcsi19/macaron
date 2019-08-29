@@ -1,0 +1,25 @@
+.navbar_main{
+  display: flex;
+  margin-top: 20px;
+  padding-bottom: 18px;
+  align-items: center;
+  border-bottom: 1px solid $grayline;
+}
+
+.navbar_logo{
+  flex-grow: 2;
+  margin-left: 40px;
+  @media only screen and (max-width: 575px) {
+    margin-left: 20px;
+  }
+}
+
+.navbar_menu {
+  text-decoration: none;
+  justify-content: end;
+  color: $gray;
+  margin-right: 30px;
+  @media only screen and (max-width: 574px) {
+    margin-right: 10px;
+  }
+}

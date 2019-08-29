@@ -60,9 +60,7 @@ class Home extends Component {
       this.setState({
         cart: [...this.state.cart.map(cartItem => {
           if (cartItem.id === item.id) {
-            if (cartItem.cartquant) {
-              cartItem.cartquant++
-            }
+            cartItem.cartquant++
             cartItem.cartTotal = cartItem.price * cartItem.cartquant
           }
           return cartItem
