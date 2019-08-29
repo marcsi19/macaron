@@ -12,7 +12,7 @@ const Product = (props) => {
       <div>{product.quantity}</div>
       <div>{product.description}</div>
       <div>${product.price} /ea.</div>
-      <button type="submit" onClick={() => addToCart(product)}>{buttonText[product.id - 1]}</button>
+      <button className="addtocart" type="submit" onClick={() => addToCart(product)}>{buttonText[product.id - 1]}</button>
     </div>
   )
 

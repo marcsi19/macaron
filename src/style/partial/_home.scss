@@ -1,0 +1,12 @@
+.homepage{
+  z-index: 1;
+  // height: ;
+  // background: red
+}
+
+.homepage_cart {
+  filter: brightness(50%);
+  background-color: rgba(255, 255, 255, 0.438);
+  pointer-events: none;
+  cursor: default;
+}

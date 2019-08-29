@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import './App.scss';
 import { Route } from 'react-router-dom'
 import Menu from './components/menu'
 import Cart from './components/cart'
 import Navbar from './components/navbar'
-// import logo from './img/logo.svg'
-// import cartIcon from './img/cart_icon.svg'
+import Footer from './components/footer'
+
+
 
 const defaultState = {
   menuItems: [{
@@ -42,7 +42,7 @@ const defaultState = {
   cart: [],
   showCart: "cart_hidden",
   homepageClass: "homepage",
-  buttonText: ["+ Add to Cart", "+ Add to Cart", "+ Add to Cart"]
+  buttonText: ["+ Add to Cart", "+ Add to Cart", "+ Add to Cart"],
 }
 class Home extends Component {
   constructor() {
@@ -100,6 +100,7 @@ class Home extends Component {
   }
 
   showingCart() {
+
     if (this.state.showCart === 'cart_hidden') {
       this.setState({
         showCart: 'cart_showing',
@@ -119,12 +120,11 @@ class Home extends Component {
         <div className={this.state.homepageClass}>
           <Navbar showingCart={this.showingCart} />
 
-          {/* <div className={styles["resizeable-both"]}>{this.state.hello}</div> */}
-
-
-          {/* <Route path="/" render={() => <Cart cart={this.state.cart} removeFromCart={this.state.removeFromCart} showCart={!this.state.showCart} />} /> */}
           <Route path="/menu" render={() => <Menu menuItems={this.state.menuItems} addToCart={this.addToCart} buttonText={this.state.buttonText} />} />
+
+          <Footer />
         </div>
+
         <Cart cart={this.state.cart} removeFromCart={this.removeFromCart} showCart={this.state.showCart} showingCart={this.showingCart} />
 
       </div >

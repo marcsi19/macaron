@@ -1,0 +1,19 @@
+.addtocart{
+  font-family: $font-family-Poppins;
+  font-size: 13px;
+  color: $white;
+  letter-spacing: 0.5px;
+  background: $green;
+  height: 50px;
+  width: 175px;
+}
+
+.addtocart:hover,
+.addtocart:active {
+  background: $darkgreen;
+}
+
+.addtocart:link,
+.addtocart:visited {
+  background-color: $lightgreen;
+}
