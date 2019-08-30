@@ -1,0 +1,30 @@
+.read_more {
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  color: $darkgreen;
+  font-size: 12px;
+  padding: 0;
+  @media only screen and (max-width: 860px) {
+    font-size: 11px;
+  }
+}
+
+.read_div {
+  @media only screen and (max-width: 666px) {
+    text-align: center;
+    margin-left: 10px;
+  }
+}
+.collapse {
+  display: none
+}
+
+.in {
+    display: block;
+}
+
+.read_more.in {
+    margin-bottom: 40px;
+
+}
