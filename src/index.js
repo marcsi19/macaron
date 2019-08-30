@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import "./index.scss";
 import createBrowserHistory from "./history";
 import App from "./App";
-import { Router } from 'react-router-dom'
+import { HashRouter as Router } from 'react-router-dom'
 import * as serviceWorker from "./serviceWorker";
 import ScrollToTop from "./scrolltotop";
 import './style/main.scss';
