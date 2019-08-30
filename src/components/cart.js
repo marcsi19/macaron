@@ -7,7 +7,9 @@ const Cart = (props) => {
 
   return (
     <div className={showCart}>
-      <button onClick={showingCart} className="cart_close_button">Close</button>
+      <div>
+        <button onClick={showingCart} className="cart_close_button">Close</button>
+      </div>
       <h3>My Cart</h3>
       < div > {cart.map(item => {
         return (
