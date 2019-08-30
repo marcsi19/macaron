@@ -1,18 +1,18 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b5243235d7cddceabf002b752d533f26",
+    "revision": "12f4999d381d2d37b00fe8da8f2adcfe",
     "url": "/macaron/index.html"
   },
   {
-    "revision": "2d28a517c3d77d81a03e",
-    "url": "/macaron/static/css/main.0b27f9e3.chunk.css"
+    "revision": "475d0ddedd64807eaff9",
+    "url": "/macaron/static/css/main.0bf89195.chunk.css"
   },
   {
     "revision": "bfeef83a8e6eca906b9b",
     "url": "/macaron/static/js/2.0cbb059b.chunk.js"
   },
   {
-    "revision": "2d28a517c3d77d81a03e",
+    "revision": "475d0ddedd64807eaff9",
     "url": "/macaron/static/js/main.27ae3023.chunk.js"
   },
   {
