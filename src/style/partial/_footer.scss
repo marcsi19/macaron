@@ -26,13 +26,13 @@
   margin-left: 40px;
   @media only screen and (max-width: 574px) {
     margin-left: 20px;
-  }
-  p {
-    padding-top: 20px;
-    color: $lighgray;
-    font-size: 12px;
-    font-weight: 300;
-  }
+    }
+    p {
+      padding-top: 20px;
+      color: $lighgray;
+      font-size: 12px;
+      font-weight: 300;
+    }
 }
 
 .footer_media {
@@ -85,7 +85,7 @@
     div {
       padding-left: 20px;
       padding-right: 30px;
-      margin-left: 20px;
+      // margin-left: 20px;
     }
   }
 }
