@@ -12,7 +12,6 @@
     flex-flow: row wrap;
   }
   @media only screen and (max-width: 574px) {
-    flex-flow: row wrap;
     h3 {
       font-size: 12px;
       width: 300px;
@@ -83,9 +82,8 @@
   }
   @media only screen and (max-width: 828px) {
     div {
-      padding-left: 20px;
+      padding-left: 0px;
       padding-right: 30px;
-      // margin-left: 20px;
     }
   }
 }

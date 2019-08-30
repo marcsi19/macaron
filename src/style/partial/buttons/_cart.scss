@@ -1,8 +1,9 @@
 .cart_nav {
   border: none;
+  background: none;
   font-size: 16px;
   font-weight: 500;
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 628px) {
     margin-right: 10px;
     font-size: 12px;
   }
