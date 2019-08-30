@@ -3,8 +3,10 @@
   font-weight: 600;
   font-size: 24px;
   margin-left: 40px;
-  @media only screen and (max-width: 574px) {
-    margin-left: 20px;
+
+  @media only screen and (max-width: 666px) {
+    text-align: center;
+    margin-left: 0px;
   }
 }
 
@@ -94,7 +96,8 @@
       }
       p {
         text-align: center;
-        width: 80vw;
+        width: 90vw;
+        margin-left: 0;
       }
     }
 }
