@@ -4,6 +4,10 @@
   border: none;
   cursor: pointer;
   padding: 0;
+  @media only screen and (max-width: 575px) {
+    margin-right: 35px;
+  }
+
 }
 
 

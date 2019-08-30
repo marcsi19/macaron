@@ -8,10 +8,19 @@
     font-size: 16px;
     width: 378px;
   }
+  @media only screen and (max-width: 1000px) {
+    flex-flow: row wrap;
+  }
+  @media only screen and (max-width: 574px) {
+    flex-flow: row wrap;
+    h3 {
+      font-size: 12px;
+    }
+  }
 }
 
 .footer_left {
-  // flex-grow: 2;
+  flex-grow: 2;
   padding-top: 25px;
   margin-left: 40px;
   @media only screen and (max-width: 574px) {
@@ -58,8 +67,25 @@
     padding-top: 20px;
   }
   div {
-    // margin-right: 120px;
-    padding-left: 200px;
+    padding-left: 150px;
+    margin-left: 40px;
+  }
+  @media only screen and (max-width: 1100px) {
+    div {
+      padding-left: 100px;
+    }
+  }
+  @media only screen and (max-width: 928px) {
+    div {
+      margin-left: 20px;
+    }
+  }
+  @media only screen and (max-width: 828px) {
+    div {
+      padding-left: 20px;
+      padding-right: 30px;
+      margin-left: 20px;
+    }
   }
 }
 

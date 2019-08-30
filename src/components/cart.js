@@ -29,9 +29,9 @@ const Cart = (props) => {
           </div>
         )
       })}</div >
-      <div className="cart_total">Total   ${cart.reduce(((acc, currVal) =>
+      <div className="cart_total">Total </div> <div className="cart_total_amount"> ${cart.reduce(((acc, currVal) =>
         acc + currVal.cartTotal), 0)}</div>
-      <button className="checkout_btn">Checkout</button>
+      <button className="checkout_btn">Continue to Checkout</button>
     </div >
 
   )
