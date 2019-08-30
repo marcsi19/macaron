@@ -35,6 +35,7 @@
   // }
   @media only screen and (max-width: 838px) {
     height: auto;
+    flex-flow: row wrap;
   }
   @media only screen and (max-width: 574px) {
     margin-left: 20px;
@@ -49,15 +50,15 @@
   height: 160px;
   width: 220px;
   @media only screen and (max-width: 860px) {
-    height: 25vh;
+    height: 140px;
     width: auto;
   }
-  @media only screen and (max-width: 700px) {
-    height: 19vh;
+  @media only screen and (max-width: 838px) {
+    height: 300px;
     width: auto;
   }
   @media only screen and (max-width: 660px) {
-    height: 14vh;
+    height: 250px;
     width: auto;
   }
   // @media only screen and (max-width: 650px) {
@@ -106,7 +107,11 @@
       }
       p {
         font-size: 12px;
+        width: 343px;
       }
+    }
+    @media only screen and (max-width: 838px) {
+      p {width: 300px;}
     }
     @media only screen and (max-width: 660px) {
       margin-left: 10px;
@@ -118,10 +123,11 @@
       }
       p {
         font-size: 11px;
+        width: 343px;
       }
     }
-
 }
+
 .menu_product_shop{
   background-color: $graybackg;
   margin-bottom: 10px;
