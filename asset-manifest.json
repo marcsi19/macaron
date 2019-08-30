@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/macaron/static/css/main.c05bd613.chunk.css",
+    "main.css": "/macaron/static/css/main.d76d19da.chunk.css",
     "main.js": "/macaron/static/js/main.200b9e11.chunk.js",
     "main.js.map": "/macaron/static/js/main.200b9e11.chunk.js.map",
     "runtime~main.js": "/macaron/static/js/runtime~main.e5bf82f6.js",
@@ -8,9 +8,9 @@
     "static/js/2.67b51b05.chunk.js": "/macaron/static/js/2.67b51b05.chunk.js",
     "static/js/2.67b51b05.chunk.js.map": "/macaron/static/js/2.67b51b05.chunk.js.map",
     "index.html": "/macaron/index.html",
-    "precache-manifest.025c0cb1fb33a774c13370413d9799f4.js": "/macaron/precache-manifest.025c0cb1fb33a774c13370413d9799f4.js",
+    "precache-manifest.7b5cd454b31feb6de4804aa7368a8d78.js": "/macaron/precache-manifest.7b5cd454b31feb6de4804aa7368a8d78.js",
     "service-worker.js": "/macaron/service-worker.js",
-    "static/css/main.c05bd613.chunk.css.map": "/macaron/static/css/main.c05bd613.chunk.css.map",
+    "static/css/main.d76d19da.chunk.css.map": "/macaron/static/css/main.d76d19da.chunk.css.map",
     "static/media/cart_icon.svg": "/macaron/static/media/cart_icon.0a05a26d.svg",
     "static/media/custom_gift_box.png": "/macaron/static/media/custom_gift_box.21449971.png",
     "static/media/facebook_icon.svg": "/macaron/static/media/facebook_icon.7f287522.svg",
