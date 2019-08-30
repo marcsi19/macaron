@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/macaron/static/css/main.fd574111.chunk.css",
+    "main.js": "/macaron/static/js/main.003cecd2.chunk.js",
+    "main.js.map": "/macaron/static/js/main.003cecd2.chunk.js.map",
+    "runtime~main.js": "/macaron/static/js/runtime~main.e5bf82f6.js",
+    "runtime~main.js.map": "/macaron/static/js/runtime~main.e5bf82f6.js.map",
+    "static/js/2.67b51b05.chunk.js": "/macaron/static/js/2.67b51b05.chunk.js",
+    "static/js/2.67b51b05.chunk.js.map": "/macaron/static/js/2.67b51b05.chunk.js.map",
+    "index.html": "/macaron/index.html",
+    "precache-manifest.71f2f818f26407e8ff8df4a961e563a4.js": "/macaron/precache-manifest.71f2f818f26407e8ff8df4a961e563a4.js",
+    "service-worker.js": "/macaron/service-worker.js",
+    "static/css/main.fd574111.chunk.css.map": "/macaron/static/css/main.fd574111.chunk.css.map",
+    "static/media/cart_icon.svg": "/macaron/static/media/cart_icon.0a05a26d.svg",
+    "static/media/custom_gift_box.png": "/macaron/static/media/custom_gift_box.21449971.png",
+    "static/media/facebook_icon.svg": "/macaron/static/media/facebook_icon.7f287522.svg",
+    "static/media/instagram_icon.svg": "/macaron/static/media/instagram_icon.58187fb3.svg",
+    "static/media/logo.svg": "/macaron/static/media/logo.7b07a203.svg",
+    "static/media/rose.png": "/macaron/static/media/rose.88a88bb7.png",
+    "static/media/twitter_icon.svg": "/macaron/static/media/twitter_icon.9eaddc56.svg",
+    "static/media/vanilla.png": "/macaron/static/media/vanilla.5d0b985f.png"
+  }
+}
