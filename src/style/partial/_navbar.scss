@@ -14,7 +14,7 @@
   }
   img {
     @media only screen and (max-width: 575px) {
-      width: 90px;
+      width: 80px;
       margin-top: 5px;
       height: auto;
     }
@@ -27,6 +27,6 @@
   margin-right: 30px;
   @media only screen and (max-width: 600px) {
     margin-right: 10px;
-    font-size: 14px;
+    font-size: 12px;
   }
 }
