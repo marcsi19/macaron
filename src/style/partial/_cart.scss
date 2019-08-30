@@ -61,6 +61,9 @@
   border-bottom: 1px solid $grayline;
   padding-top: 5px;
   padding-bottom: 10px;
+  @media only screen and (max-width: 575px) {
+    width: 270px;
+  }
 }
 
 .cart_product_img img {
@@ -71,7 +74,6 @@
 .cart_product_description {
   flex-grow: 2;
   text-align: left;
-  // width: 200px;
   margin-left: 12px;
     h3 {
       margin: 0;
@@ -109,12 +111,10 @@
 }
 
 .cart_product_price {
-  margin-right: 10px;
   font-weight: 600;
   font-size: 12px;
   @media only screen and (max-width: 575px) {
     font-size: 12px;
-    margin-right: 75px;
   }
 }
 
@@ -132,6 +132,6 @@
   margin-top: -25px;
   padding-bottom: 40px;
   @media only screen and (max-width: 575px) {
-    margin-right: 33px;
+    margin-right: 30px;
   }
 }
