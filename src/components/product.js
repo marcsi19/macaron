@@ -13,7 +13,7 @@ const Product = (props) => {
       </div>
       <div className="menu_product_description">
         <h3>{product.title}</h3>
-        <h4>{product.quantity}</h4>
+        <h4>{product.subTitle}</h4>
         <div>
           {product.description.split('\n').map((item, i) =>
             (i === 2) ?

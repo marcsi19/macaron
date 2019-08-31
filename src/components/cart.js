@@ -22,7 +22,7 @@ const Cart = (props) => {
               </div>
               <div className="cart_product_description">
                 <h3>{item.title}</h3>
-                <h4>{item.quantity}</h4>
+                <h4>{item.subTitle}</h4>
                 <button onClick={() => removeFromCart(item.id)}>Remove</button>
               </div>
               <div className="cart_product_price">${item.price}</div>
@@ -32,7 +32,7 @@ const Cart = (props) => {
         )
       })}</div >
       <div className="cart_total">Total </div> <div className="cart_total_amount"> ${cart.reduce(((acc, currVal) =>
-        acc + currVal.cartTotal), 0)}</div>
+        acc + (currVal.quantity * currVal.price)), 0)}</div>
       <button className="checkout_btn">Continue to Checkout</button>
     </div >
 

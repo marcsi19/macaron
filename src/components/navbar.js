@@ -5,7 +5,7 @@ import cartIcon from '../img/cart_icon.svg'
 
 const Navbar = (props) => {
 
-  let cartQuant = props.cartQuant
+  let quantity = props.quantity
   return (
     <div>
       <nav className="navbar_main">
@@ -24,7 +24,7 @@ const Navbar = (props) => {
           className='cart_svg'
         /></span>
         <button className="cart_nav navbar_menu" onClick={props.showingCart}>
-          <span className={cartQuant ? "cart_circle" : "cart_circle_empty"}>{cartQuant ? cartQuant : ""}</span>
+          <span className={quantity ? "cart_circle" : "cart_circle_empty"}>{quantity ? quantity : ""}</span>
           Cart</button>
       </nav>
     </div>

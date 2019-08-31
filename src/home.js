@@ -4,41 +4,12 @@ import Menu from './components/menu'
 import Cart from './components/cart'
 import Navbar from './components/navbar'
 import Footer from './components/footer'
+import menuItem from './components/data'
 
 
 
 const defaultState = {
-  menuItems: [{
-    id: 1,
-    title: 'Custom Gift Box',
-    quantity: 'Assorted Flavors',
-    description: `This 16 piece gift box is perfect for birthdays, anniversaries or just for yourself! Customize your flavors or pick from our three gift boxes! \n
-    We offer pre-packed Citrus, Floral or Classic themed boxes. We offer next day delivery for free with all custom gift boxes!`,
-    price: 55,
-    cartquant: 0,
-    cartTotal: 0,
-    image: require('./img/custom_gift_box.png')
-  },
-  {
-    id: 2,
-    title: 'Vanilla Earl Grey Macaron',
-    quantity: '1 Piece',
-    description: `Our most popular flavor! Each macaron is filled with earl grey ganache.`,
-    price: 3.75,
-    cartquant: 0,
-    cartTotal: 0,
-    image: require('./img/vanilla.png')
-  },
-  {
-    id: 3,
-    title: 'Rose Macarons',
-    quantity: '1 Piece',
-    description: `Our most romatic flavor! Filled with the lightest, sweetest rose ganache, this macaron will definitely be a pleasant surprise.`,
-    price: 3.75,
-    cartquant: 0,
-    cartTotal: 0,
-    image: require('./img/rose.png')
-  }],
+  menuItems: menuItem,
   cart: [],
   showCart: false,
   homepageClass: "homepage",
@@ -56,31 +27,36 @@ class Home extends Component {
 
   addToCart(item) {
     let itemId = item.id - 1
+    let buttonText = this.state.buttonText.map((elem, i) =>
+      i === itemId ? "\u2713 Added to Cart" : elem
+    )
     if (this.state.cart.filter(cartItem => cartItem.id === item.id).length) {
       const wrapper = document.getElementById('wrapper');
       wrapper.classList.toggle('is-nav-open')
+
       this.setState({
         cart: [...this.state.cart.map(cartItem => {
           if (cartItem.id === item.id) {
-            cartItem.cartquant++
-            cartItem.cartTotal = cartItem.price * cartItem.cartquant
+            cartItem.quantity++
           }
           return cartItem
         })],
         showCart: true,
         homepageClass: "homepage homepage_cart",
-        buttontext: [...this.state.buttonText[itemId] = "\u2713 Added to Cart"]
+        buttonText: buttonText
       })
+
     } else {
-      item.cartquant++
-      item.cartTotal = item.price * item.cartquant
+      item.quantity++
+
       const wrapper = document.getElementById('wrapper');
       wrapper.classList.toggle('is-nav-open')
+
       this.setState({
         cart: [...this.state.cart, item],
         showCart: true,
         homepageClass: "homepage homepage_cart",
-        buttontext: [...this.state.buttonText[itemId] = "\u2713 Added to Cart"]
+        buttonText: buttonText
       })
     }
   }
@@ -90,8 +66,7 @@ class Home extends Component {
       menuItems: defaultState.menuItems,
       cart: this.state.cart.map(cartItem => {
         if (cartItem.id === itemId) {
-          cartItem.cartquant = 0
-          cartItem.cartTotal = cartItem.price
+          cartItem.quantity = 0
         }
         return cartItem
       }).filter(cartItem => cartItem.id !== itemId),
@@ -104,34 +79,22 @@ class Home extends Component {
   showingCart() {
     const wrapper = document.getElementById('wrapper');
     wrapper.classList.toggle('is-nav-open')
-    if (!this.state.showCart) {
-      this.setState({
-        showCart: !this.state.showCart,
-        homepageClass: "homepage homepage_cart",
-      })
-    } else {
-      this.setState({
-        showCart: !this.state.showCart,
-        homepageClass: "homepage",
-      })
-    }
+    this.setState({
+      showCart: !this.state.showCart,
+      homepageClass: !this.state.showCart ? "homepage homepage_cart" : "homepage",
+    })
   }
   render() {
-    let cartQuant = this.state.cart.reduce(((acc, currVal) =>
-      acc + currVal.cartquant), 0)
-    console.log(cartQuant)
+    let quantity = this.state.cart.reduce(((acc, currVal) =>
+      acc + currVal.quantity), 0)
     return (
       <div>
         <div className={this.state.homepageClass}>
-          <Navbar showingCart={this.showingCart} cartQuant={cartQuant} />
-
+          <Navbar showingCart={this.showingCart} quantity={quantity} />
           <Route path="/menu" render={() => <Menu menuItems={this.state.menuItems} addToCart={this.addToCart} buttonText={this.state.buttonText} />} />
-
           <Footer />
         </div>
-
         <Cart cart={this.state.cart} removeFromCart={this.removeFromCart} showCart={this.state.showCart} showingCart={this.showingCart} />
-
       </div >
 
     );
