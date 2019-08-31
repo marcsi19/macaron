@@ -12,7 +12,7 @@ const Cart = (props) => {
       <div>
         <button onClick={showingCart} className="cart_close_button">Close</button>
       </div>
-      <h3>My Cart</h3>
+      <h2>My Cart</h2>
       < div > {cart.map(item => {
         return (
           <div key={item.id}>
