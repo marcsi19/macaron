@@ -18,11 +18,12 @@ const Navbar = (props) => {
         <Link to="/beverages" className="navbar_menu">Beverages</Link>
         <Link to="/gifts" className="navbar_menu">Gifts</Link>
         <span className="navbar_menu">|</span>
-        <button className="cart_nav navbar_menu" onClick={props.showingCart}><img
+        <span><img
           src={cartIcon}
           alt="Cart"
           className='cart_svg'
-        />
+        /></span>
+        <button className="cart_nav navbar_menu" onClick={props.showingCart}>
           <span className={cartQuant ? "cart_circle" : "cart_circle_empty"}>{cartQuant ? cartQuant : ""}</span>
           Cart</button>
       </nav>
