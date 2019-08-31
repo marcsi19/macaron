@@ -22,6 +22,7 @@
 .navbar_menu {
   text-decoration: none;
   color: $gray;
+  font-weight: 400;
   margin-right: 30px;
   @media only screen and (max-width: 628px) {
     margin-right: 10px;
