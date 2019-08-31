@@ -1,38 +1,23 @@
 import React from 'react'
+import CartItem from './cartItem'
+
 
 const Cart = (props) => {
-
-
   let { cart, showCart, showingCart, removeFromCart } = props
 
-
   return (
-
     <div className="wrapper" id="wrapper">
       <div>
         <button onClick={showingCart} className="cart_close_button">Close</button>
       </div>
       <h2>My Cart</h2>
-      < div > {cart.map(item => {
+      < div > {cart.map(product => {
         return (
-          <div key={item.id}>
-            <div className="cart_product_main" >
-              <div className="cart_product_img">
-                <img src={item.image} alt="item" />
-              </div>
-              <div className="cart_product_description">
-                <h3>{item.title}</h3>
-                <h4>{item.subTitle}</h4>
-                <button onClick={() => removeFromCart(item.id)}>Remove</button>
-              </div>
-              <div className="cart_product_price">${item.price}</div>
-            </div>
-
-          </div>
+          <CartItem product={product} removeFromCart={removeFromCart} key={product.id} />
         )
       })}</div >
       <div className="cart_total">Total </div> <div className="cart_total_amount"> ${cart.reduce(((acc, currVal) =>
-        acc + (currVal.quantity * currVal.price)), 0)}</div>
+        acc + (currVal.quantity * currVal.price)), 0).toFixed(2)}</div>
       <button className="checkout_btn">Continue to Checkout</button>
     </div >
 
