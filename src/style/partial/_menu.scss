@@ -1,14 +1,18 @@
-.menu_main h3 {
+.menu_main {
+  // margin-top: 100px;
+  // @media only screen and (max-width: 666px) {
+  //   margin-top: 90px;
+  // }
+  h3 {
   font-family: $font-family-Poppins;
   font-weight: 600;
   font-size: 24px;
   margin-left: 40px;
-
   @media only screen and (max-width: 666px) {
-    text-align: center;
-    margin-left: 0px;
+      text-align: center;
+      margin-left: 0px;
   }
-}
+}}
 
 .menu_product_main {
   display: flex;
