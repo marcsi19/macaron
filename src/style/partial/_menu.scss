@@ -83,7 +83,13 @@
     @media only screen and (max-width: 758px) {
 
       p {
-        width: 31vw;
+        width: 35vw;
+      }
+    }
+    @media only screen and (max-width: 688px) {
+
+      p {
+        width: 30vw;
       }
     }
     @media only screen and (max-width: 666px) {
