@@ -2,11 +2,13 @@ import React from 'react'
 
 const Cart = (props) => {
 
-  let { cart, showCart, showingCart } = props
+
+  let { cart, showCart, showingCart, removeFromCart } = props
 
 
   return (
-    <div className={showCart}>
+
+    <div className="wrapper" id="wrapper">
       <div>
         <button onClick={showingCart} className="cart_close_button">Close</button>
       </div>
@@ -21,7 +23,7 @@ const Cart = (props) => {
               <div className="cart_product_description">
                 <h3>{item.title}</h3>
                 <h4>{item.quantity}</h4>
-                <button onClick={() => props.removeFromCart(item.id)}>Remove</button>
+                <button onClick={() => removeFromCart(item.id)}>Remove</button>
               </div>
               <div className="cart_product_price">${item.price}</div>
             </div>

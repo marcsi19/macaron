@@ -40,7 +40,7 @@ const defaultState = {
     image: require('./img/rose.png')
   }],
   cart: [],
-  showCart: "cart_hidden",
+  showCart: false,
   homepageClass: "homepage",
   buttonText: ["+ Add to Cart", "+ Add to Cart", "+ Add to Cart"],
 }
@@ -57,6 +57,8 @@ class Home extends Component {
   addToCart(item) {
     let itemId = item.id - 1
     if (this.state.cart.filter(cartItem => cartItem.id === item.id).length) {
+      const wrapper = document.getElementById('wrapper');
+      wrapper.classList.toggle('is-nav-open')
       this.setState({
         cart: [...this.state.cart.map(cartItem => {
           if (cartItem.id === item.id) {
@@ -65,16 +67,18 @@ class Home extends Component {
           }
           return cartItem
         })],
-        showCart: 'cart_showing',
+        showCart: true,
         homepageClass: "homepage homepage_cart",
         buttontext: [...this.state.buttonText[itemId] = "\u2713 Added to Cart"]
       })
     } else {
       item.cartquant++
       item.cartTotal = item.price * item.cartquant
+      const wrapper = document.getElementById('wrapper');
+      wrapper.classList.toggle('is-nav-open')
       this.setState({
         cart: [...this.state.cart, item],
-        showCart: 'cart_showing',
+        showCart: true,
         homepageClass: "homepage homepage_cart",
         buttontext: [...this.state.buttonText[itemId] = "\u2713 Added to Cart"]
       })
@@ -98,25 +102,28 @@ class Home extends Component {
   }
 
   showingCart() {
-
-    if (this.state.showCart === 'cart_hidden') {
+    const wrapper = document.getElementById('wrapper');
+    wrapper.classList.toggle('is-nav-open')
+    if (!this.state.showCart) {
       this.setState({
-        showCart: 'cart_showing',
+        showCart: !this.state.showCart,
         homepageClass: "homepage homepage_cart",
       })
     } else {
       this.setState({
-        showCart: 'cart_hidden',
+        showCart: !this.state.showCart,
         homepageClass: "homepage",
       })
     }
   }
   render() {
-
+    let cartQuant = this.state.cart.reduce(((acc, currVal) =>
+      acc + currVal.cartquant), 0)
+    console.log(cartQuant)
     return (
       <div>
         <div className={this.state.homepageClass}>
-          <Navbar showingCart={this.showingCart} />
+          <Navbar showingCart={this.showingCart} cartQuant={cartQuant} />
 
           <Route path="/menu" render={() => <Menu menuItems={this.state.menuItems} addToCart={this.addToCart} buttonText={this.state.buttonText} />} />
 
