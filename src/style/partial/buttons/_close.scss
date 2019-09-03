@@ -1,12 +1,12 @@
 .cart_close_button {
   float: right;
   background: none;
+  color: $gray;
+  font-size: 14px;
   margin-right: 41px;
   border: none;
-  font-size: 14px;
-  color: $gray;
-  cursor: pointer;
   padding: 0;
+  cursor: pointer;
   @media only screen and (max-width: 575px) {
     margin-right: 30px;
   }

@@ -1,21 +1,19 @@
 .read_more {
-  border: none;
-  cursor: pointer;
-  font-weight: 600;
   color: $darkgreen;
   font-size: 12px;
+  font-weight: $semi-bold;
+  border: none;
   padding: 0;
+  cursor: pointer;
   @media only screen and (max-width: 860px) {
     font-size: 11px;
   }
-}
-
-.read_div {
   @media only screen and (max-width: 666px) {
-    text-align: center;
-    margin-left: 10px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
+
 .collapse {
   display: none
 }
@@ -26,5 +24,4 @@
 
 .read_more.in {
     margin-bottom: 40px;
-
 }

@@ -14,7 +14,7 @@ const Product = (props) => {
       <div className="menu_product_description">
         <h3>{product.title}</h3>
         <h4>{product.subTitle}</h4>
-        <div>
+        <div className="menu_product_description_desc">
           {product.description.split('\n').map((item, i) =>
             (i === 2) ?
               (<div key={i}>

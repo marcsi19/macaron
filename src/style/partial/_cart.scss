@@ -1,9 +1,9 @@
 .cart_product_main {
   display: flex;
-  width: 340px;
   border-bottom: 1px solid $grayline;
   padding-top: 5px;
   padding-bottom: 10px;
+  width: 340px;
   @media only screen and (max-width: 575px) {
     width: 270px;
   }
@@ -19,26 +19,26 @@
   text-align: left;
   margin-left: 12px;
     h3 {
-      margin: 0;
       color: $green;
-      text-align: left;
-      font-weight: 500;
       font-size: 15px;
+      font-weight: $medium;
+      text-align: left;
+      margin: 0;
     }
     h4 {
-      margin: 0;
       color: $gray;
-      font-weight: 500;
       font-size: 11px;
+      font-weight: $medium;
+      margin: 0;
       margin-block-end: 0;
     }
     button {
-      border: none;
       color: $lighgray;
       text-decoration: underline;
-      cursor: pointer;
       margin: 0;
+      border: none;
       padding: 0;
+      cursor: pointer;
     }
     @media only screen and (max-width: 575px) {
       h3 {
@@ -54,23 +54,23 @@
 }
 
 .cart_product_price {
-  font-weight: 600;
   font-size: 12px;
+  font-weight: $semi-bold;
   @media only screen and (max-width: 575px) {
     font-size: 12px;
   }
 }
 
 .cart_total {
-  font-weight: 600;
-  width: 340px;
   float: left;
+  font-weight: $semi-bold;
   padding-top: 30px;
+  width: 340px;
 }
 
 .cart_total_amount {
   float: right;
-  font-weight: 600;
+  font-weight: $semi-bold;
   margin-right: 41px;
   margin-top: -25px;
   padding-bottom: 40px;
@@ -81,17 +81,17 @@
 
 
 .wrapper {
+  background-color:white;
   position: fixed;
-  right: -500px;
   top: 0px;
+  right: -500px;
+  margin: 0 -500px 0 0;
+  border-radius: 2px;
   padding-top: 30px;
   width: 300px;
   height: 100vh;
   transition: margin 1s;
-  background-color:white;
-  margin: 0 -500px 0 0;
   box-shadow: 0 0 16px 0 rgba(0,0,0,0.10);
-  border-radius: 2px;
     h2 {
       font-size: 24px;
     }
@@ -99,16 +99,17 @@
 
 .wrapper.is-nav-open {
   position: fixed;
+  background-color: $white;
   top: 0px;
   margin-right: 500px;
+  border-radius: 2px;
   padding-top: 30px;
   padding-left: 25px;
   width: 380px;
   height: 100vh;
   filter: brightness(1);
-  background-color: white;
+  -webkit-filter:brightness(1);
   box-shadow: 0 0 16px 0 rgba(0,0,0,0.10);
-  border-radius: 2px;
     @media only screen and (max-width: 575px) {
         width: 300px;
       }

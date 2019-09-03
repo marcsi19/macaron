@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.scss";
 import createBrowserHistory from "./history";
 import App from "./App";
 import { HashRouter as Router } from 'react-router-dom'
