@@ -1,5 +1,8 @@
 ## Maca macaron
-Open [https://marcsi19.github.io/macaron/] (Website) to view it in the browser.
+Open [website](https://marcsi19.github.io/macaron/)
+
+## Available Scripts
+
 In the project directory, you can run:
 ### `npm install`
 ### `npm start`
