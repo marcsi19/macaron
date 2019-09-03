@@ -1,5 +1,5 @@
 ## Maca macaron
-Open [website](https://marcsi19.github.io/macaron/)
+Open [website](https://marcsi19.github.io/macaron/#/menu)
 
 ## Available Scripts
 
