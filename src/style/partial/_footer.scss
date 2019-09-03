@@ -11,6 +11,11 @@
   @media only screen and (max-width: 1000px) {
     flex-flow: row wrap;
   }
+  @media only screen and (max-width: 850px) {
+    h3 {
+      width: 250px;
+    }
+  }
   @media only screen and (max-width: 574px) {
     h3 {
       font-size: 12px;

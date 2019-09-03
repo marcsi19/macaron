@@ -2,6 +2,13 @@ body {
   font-family: $font-family-Poppins;
   color: $gray;
   margin: 0;
+
+}
+
+#root {
+  @media only screen and (min-height: 1024px) {
+    height: 100vh;
+  }
 }
 
 
